@@ -8,11 +8,10 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route path="/" element={<Login />} />
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/registrar" element={<RegistrarPage />} />
-        <Route path="/fetch-member" element={<FetchMember />} />{" "}
-        {/* Add the route for FetchMember */}
+        <Route path="/fetch-member" element={<FetchMember />} /> {/* Add the route for FetchMember */}
       </Routes>
     </Router>
   );
