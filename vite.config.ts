@@ -2,8 +2,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: "/Community_Management/",
   plugins: [react()],
   server: {
-    port: 3001, // Change the port to 3001 or any other available port
+    port: 3001, 
   },
 });
