@@ -10,7 +10,7 @@ const FetchMember: React.FC = () => {
   const handleFetch = async () => {
     try {
       // Updated URL to match the server endpoint
-      const response = await axios.get(`https://community-management-1.onrender.com/Fetch-Member`, {
+      const response = await axios.get(`https://community-management-1.onrender.com/fetch-member`, {
         params: { ID_number: idNumber },
       });
 
