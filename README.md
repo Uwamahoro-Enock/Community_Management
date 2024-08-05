@@ -113,7 +113,7 @@ export default defineConfig({
 
 Ensure your package.json has the correct homepage field:
 
-"homepage": "https://uwamahoro-enock.github.io/Community_Management/"
+"homepage": "https://community-management-1.onrender.com"
 
 
 Build the project:
