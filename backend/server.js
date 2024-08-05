@@ -65,7 +65,7 @@ app.post('/register', async (req, res) => {
 });
 
 // Define the fetch-member route handler
-app.get('/Fetch-Member', async (req, res) => {
+app.get('/fetchmember', async (req, res) => {
   const { ID_number } = req.query;
 
   try {
