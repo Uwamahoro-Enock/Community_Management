@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { pool, communityPool } from './db.js'; 
+import pool from './db.js'; 
 
 const app = express();
 const PORT = 3000;
@@ -40,7 +40,7 @@ app.post('/register', async (req, res) => {
   const { fullName, idNumber, mobileContact, age, location, role, maritalStatus } = req.body;
 
   try {
-    const connection = await communityPool.getConnection();
+    const connection = await pool.getConnection();
 
     // Check if the user already exists
     const [existingUser] = await connection.query('SELECT * FROM members WHERE id_number = ?', [idNumber]);
@@ -69,7 +69,7 @@ app.get('/fetch-member', async (req, res) => {
   const { ID_number } = req.query;
 
   try {
-    const connection = await communityPool.getConnection();
+    const connection = await pool.getConnection();
     const [rows] = await connection.query('SELECT * FROM members WHERE id_number = ?', [ID_number]);
     connection.release();
 
@@ -90,7 +90,6 @@ app.get('/fetch-member', async (req, res) => {
 app.listen(PORT, async () => {
   try {
     await pool.getConnection(); // Test database connection
-    await communityPool.getConnection(); // Test community database connection
     console.log(`Backend Server is running on: http://localhost:${PORT}`);
     console.log('Connected to MySQL databases');
   } catch (error) {
