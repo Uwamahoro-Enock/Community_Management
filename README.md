@@ -1,3 +1,19 @@
+# Using the app.
+
+upon logging in, use these default credentials to be able to access other pages:
+
+email: enockdev01@gmail.com
+password: 12345
+
+if login button doesn't  display anything, refresh and try to relog.
+
+on registrar page; register new member by following all instructions.
+
+hit the fetch button to retrieve the data of member you registered. 
+
+insert the ID you used to register a member, the info. will display below.
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

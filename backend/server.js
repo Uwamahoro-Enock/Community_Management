@@ -67,6 +67,7 @@ app.post('/register', async (req, res) => {
 // Define the fetch-member route handler
 app.get('/fetchmember', async (req, res) => {
   const { ID_number } = req.query;
+  console.log('Fetching member with ID_number:', ID_number);
 
   try {
     const connection = await pool.getConnection();
