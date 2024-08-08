@@ -11,7 +11,7 @@ const FetchMember: React.FC = () => {
     try {
       // Updated URL to match the server endpoint
       const response = await axios.get(`https://community-management-1.onrender.com/fetchmember`, {
-        params: { ID_number: idNumber },
+        params: { id_number: idNumber },
       });
 
       if (response.status === 200) {

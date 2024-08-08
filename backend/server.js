@@ -66,12 +66,12 @@ app.post('/register', async (req, res) => {
 
 // Define the fetch-member route handler
 app.get('/fetchmember', async (req, res) => {
-  const { ID_number } = req.query;
-  console.log('Fetching member with ID_number:', ID_number);
+  const { id_number } = req.query;
+  console.log('Fetching member with ID_number:', id_number);
 
   try {
     const connection = await pool.getConnection();
-    const [rows] = await connection.query('SELECT * FROM members WHERE id_number = ?', [ID_number]);
+    const [rows] = await connection.query('SELECT * FROM members WHERE id_number = ?', [id_number]);
     connection.release();
 
     if (rows.length > 0) {
